@@ -4,25 +4,25 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif; /* A modern, clean font */
+  font-family: 'Poppins', sans-serif;
 }
 
 /* --- Lavish Background --- */
 body {
-  background-color: #1a0b2e; /* Deep space purple fallback */
-  background-image: radial-gradient(circle, #2a104a, #1a0b2e); 
+  background-color: #1a0b2e; 
+  background-image: radial-gradient(circle, #2a104a, #1a0b2e);
   color: #ccc;
 }
 
 /* --- Vibrant Header --- */
 h1 {
-  background-color: transparent; /* Make header blend with the background */
+  background-color: transparent;
   color: #fff;
   height: 5rem;
   line-height: 5rem;
   font-size: 3rem;
   font-weight: 600;
-  text-shadow: 0 0 3px #ffffff; /* Add a neon glow to the title */
+  text-shadow: 0 0 3px #ffffff;
 }
 
 .choice {
@@ -32,14 +32,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
 }
 
 /* --- Glowing Hover Effect --- */
 .choice:hover {
   cursor: pointer;
-  transform: scale(1.1); /* Enlarge on hover */
-  box-shadow: 0 0 25px #f1f0f0, 0 0 50px #00a896; /* Double neon glow */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #f1f0f0, 0 0 50px #00a896;
 }
 
 img {
@@ -55,6 +55,7 @@ img {
   align-items: center;
   gap: 3rem;
   margin-top: 5rem;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
 /* --- Stylish Score Board --- */
@@ -65,28 +66,87 @@ img {
   font-size: 2rem;
   margin-top: 3rem;
   gap: 5rem;
-  color: #e0d1ff; /* Light lavender for text */
+  color: #e0d1ff;
+  flex-wrap: wrap;
 }
 
 #user-score,
 #comp-score {
   font-size: 4rem;
-  color: #ffd700; /* Rich gold for scores */
+  color: #ffd700;
 }
 
 .msg-container {
   margin-top: 5rem;
-  height: 5rem; /* Set a height to prevent layout shift */
+  height: 5rem;
 }
 
 /* --- High-Contrast Message Box --- */
 #msg {
-  background-color: #f1efee; /* Vibrant cyan */
-  color: #1a0b2e; /* High contrast dark purple text */
+  background-color: #f1efee;
+  color: #1a0b2e;
   font-size: 2rem;
   font-weight: 600;
-  display: inline;
+  display: inline-block;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 15px #fcfcfcf5; /* Matching glow */
+  box-shadow: 0 0 15px #fcfcfcf5;
+}
+
+/* ========================= */
+/*        RESPONSIVE         */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .choice {
+    height: 140px;
+    width: 140px;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
+  #msg {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    line-height: normal;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .choices {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  .score-board {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #user-score,
+  #comp-score {
+    font-size: 3rem;
+  }
+  #msg {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
