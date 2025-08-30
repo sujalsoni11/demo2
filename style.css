@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* A modern, clean font */
+}
+
+/* --- Lavish Background --- */
+body {
+  background-color: #1a0b2e; /* Deep space purple fallback */
+  background-image: radial-gradient(circle, #2a104a, #1a0b2e); 
+  color: #ccc;
+}
+
+/* --- Vibrant Header --- */
+h1 {
+  background-color: transparent; /* Make header blend with the background */
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-shadow: 0 0 3px #ffffff; /* Add a neon glow to the title */
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* --- Glowing Hover Effect --- */
+.choice:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Enlarge on hover */
+  box-shadow: 0 0 25px #f1f0f0, 0 0 50px #00a896; /* Double neon glow */
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+/* --- Stylish Score Board --- */
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem;
+  color: #e0d1ff; /* Light lavender for text */
+}
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+  color: #ffd700; /* Rich gold for scores */
+}
+
+.msg-container {
+  margin-top: 5rem;
+  height: 5rem; /* Set a height to prevent layout shift */
+}
+
+/* --- High-Contrast Message Box --- */
+#msg {
+  background-color: #f1efee; /* Vibrant cyan */
+  color: #1a0b2e; /* High contrast dark purple text */
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px #fcfcfcf5; /* Matching glow */
+}
